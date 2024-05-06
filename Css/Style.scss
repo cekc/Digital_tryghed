@@ -10,7 +10,6 @@
 }
 /*BODY*/
 body{
-    overflow-x: hidden;
     background-color: partial.$primary-color;
     display: grid;
     grid-template-areas: 
@@ -18,25 +17,25 @@ body{
     'main'
     'footer';
     grid-template-rows: auto auto auto; 
+    overflow-x: hidden;
 }
 
 /*HEADER*/
 header{
     grid-area: header;
-    /*min-height: 20vw;*/
     *{
         display: inline;
     }
     img{
         width: 26vw;
         height: auto;
-        margin: 4vw 0 4vw 4vw;
+        margin: 4vw 0 4vw 7vw;
     }
     p{
         font-family: partial.$primary-font;
-        font-size: 2.5vw;
+        font-size: 2.6vw;
         position: relative;
-        bottom: 5.5vw;
+        bottom: 5.6vw;
         left: 6vw;
     }
 }
@@ -46,16 +45,66 @@ main{
     grid-area: main;
     background-color: partial.$tertiery-color;
     min-height: 26vw;
+    @include partial.flex();
+    flex-direction: row;
+    div{
+        width: 40vw;
+        height: auto;
+        @include partial.flex();
+        flex-direction: column;
+        h1, p{
+            font-family: partial.$primary-font;
+            color: partial.$primary-color;
+            
+        }
+        h1{
+            font-size: 3vw;
+            padding-top: 2vw;
+        }
+        p{
+            font-size: 1.5vw;
+            line-height: 2.2vw;
+            padding: 3vw;
+        }
+        div{
+        width: auto;
+        height: auto;
+        margin-bottom: 1vw;
+        @include partial.flex();
+        flex-direction: row;
+            button{
+            @include partial.btn();
+            font-weight: 400;
+            font-size: 1.5vw;
+            }
+            i{
+                visibility: hidden;
+                color: partial.$primary-color;
+                font-size: 2.5vw;
+                margin-left: 1vw;
+            }
+            &:hover{
+                button{
+                    color: partial.$primary-color;
+                }
+                i{
+                visibility: visible;
+                }
+            }
+        }
+    }    
+    img{
+        height: 100%; 
+    }
 }
 
 /*FOOTER*/
 footer{
     grid-area: footer;
     background-color: partial.$secondary-color;
-    height: auto;
     p{
         font-family: partial.$primary-font;
-        font-size: 1vw;
+        font-size: 1rem;
         padding: 1vw;
     }
 }
@@ -69,14 +118,19 @@ footer{
         img{
             width: 56vw;
             height: auto;
-            margin: 8vw auto 4vw auto;
+            /*margin: 8vw auto 4vw auto;*/
         }
         p{
             font-family: partial.$primary-font;
             font-size: 4vw;
             position: static;
-            text-align: center;
             margin-bottom: 4vw;
+            margin-left: 12vw;
         }      
+    }
+    main{
+        img{
+            display: none;
+        }
     }
 }

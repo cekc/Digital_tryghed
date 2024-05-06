@@ -5,10 +5,24 @@ $tertiery-color: #454545;
 $quaternary-color: #000000;
 $quinary-color: #18CEF3;
 $primary-font: 'Abel';
+$secondary-font: 'Oswald';
 
 /*1.2.MIXINS*/
 @mixin flex($justify: center, $align: center){
     display: flex;
     justify-content: $justify;
     align-items: $align;
+}
+
+@mixin btn($bg-color: $quinary-color){
+    background-color: $bg-color;
+    color: $quaternary-color;
+    font-family: $secondary-font;
+    font-size: 2vw;
+    font-weight: 300;
+    padding: 0.1vw 1vw;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    border: 0.2vw solid white;
 }

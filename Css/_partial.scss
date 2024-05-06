@@ -1,2 +1,14 @@
 /*1.1.VARIABLER*/
+$primary-color: #FFFFFF;
+$secondary-color: #D9D9D9;
+$tertiery-color: #454545;
+$quaternary-color: #000000;
+$quinary-color: #18CEF3;
+$primary-font: 'Abel';
+
 /*1.2.MIXINS*/
+@mixin flex($justify: center, $align: center){
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+}

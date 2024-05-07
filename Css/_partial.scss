@@ -17,12 +17,12 @@ $secondary-font: 'Oswald';
 @mixin btn($bg-color: $quinary-color){
     background-color: $bg-color;
     color: $quaternary-color;
-    font-family: $secondary-font;
+    font-family: $primary-font;
     font-size: 2vw;
-    font-weight: 300;
+    font-weight: 700;
     padding: 0.1vw 1vw;
     text-decoration: none;
     text-align: center;
     cursor: pointer;
-    border: 0.2vw solid white;
+    border: none;
 }

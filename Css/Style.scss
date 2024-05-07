@@ -8,9 +8,15 @@
     margin: 0px;
     padding: 0px;
 }
+
+/*CLASSES*/
+.hide-btn{
+    visibility: hidden;
+}
+
 /*BODY*/
 body{
-    background-color: partial.$primary-color;
+    background-color: partial.$secondary-color;
     display: grid;
     grid-template-areas: 
     'header'
@@ -23,6 +29,7 @@ body{
 /*HEADER*/
 header{
     grid-area: header;
+    background-color: partial.$primary-color;
     *{
         display: inline;
     }
@@ -32,7 +39,8 @@ header{
         margin: 4vw 0 4vw 7vw;
     }
     p{
-        font-family: partial.$primary-font;
+        font-family: partial.$secondary-font;
+        font-weight: 200;
         font-size: 2.6vw;
         position: relative;
         bottom: 5.6vw;
@@ -44,7 +52,7 @@ header{
 main{
     grid-area: main;
     background-color: partial.$tertiery-color;
-    min-height: 26vw;
+    min-height: 36vw;
     @include partial.flex();
     flex-direction: row;
     div{
@@ -54,8 +62,7 @@ main{
         flex-direction: column;
         h1, p{
             font-family: partial.$primary-font;
-            color: partial.$primary-color;
-            
+            color: partial.$primary-color; 
         }
         h1{
             font-size: 3vw;
@@ -64,6 +71,7 @@ main{
         p{
             font-size: 1.5vw;
             line-height: 2.2vw;
+            text-align: justify;
             padding: 3vw;
         }
         div{
@@ -73,16 +81,19 @@ main{
         @include partial.flex();
         flex-direction: row;
             button{
-            @include partial.btn();
-            font-weight: 400;
-            font-size: 1.5vw;
+                @include partial.btn();
+                font-size: 1.5vw;
+                font-weight: 600;
             }
             i{
                 visibility: hidden;
+                background-color: partial.$quaternary-color;
                 color: partial.$primary-color;
-                font-size: 2.5vw;
-                margin-left: 1vw;
-            }
+                font-size: 2.1vw;
+                padding: 0 0.2vw;
+                border-top: 0.1vw solid black;
+                border-bottom: 0.1vw solid black;
+                }
             &:hover{
                 button{
                     color: partial.$primary-color;
@@ -104,11 +115,14 @@ footer{
     background-color: partial.$secondary-color;
     p{
         font-family: partial.$primary-font;
-        font-size: 1rem;
+        font-size: 1vw;
         padding: 1vw;
     }
 }
-
+/*TABLET*/
+@media only screen and (max-width: 800px){
+   
+}
 /*MOBIL*/
 @media only screen and (max-width: 600px){
     header{
@@ -118,7 +132,6 @@ footer{
         img{
             width: 56vw;
             height: auto;
-            /*margin: 8vw auto 4vw auto;*/
         }
         p{
             font-family: partial.$primary-font;
@@ -131,6 +144,24 @@ footer{
     main{
         img{
             display: none;
+        }
+        div{
+            width: 100%;
+            h1{
+                font-size: 6vw;
+            }
+            p{
+                font-size: 3vw;
+                line-height: 4vw;
+            }
+            div{
+                button{
+                font-size: 3vw;
+                }
+                i{
+                    font-size: 4vw;
+                }
+            }        
         }
     }
 }

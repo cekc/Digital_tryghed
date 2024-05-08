@@ -1,20 +1,32 @@
 /*TABLE OF CONTENT*/
-/*1:INTEGRERER PARTIAL DOCUMENT*/
+/*1.INTEGRERER PARTIAL DOCUMENT*/
+/*1.1.VARIABLER*/
+/*1.2.MIXINS*/
+/*2.DEFAULT: RETSTIL BROWSER PARAMETRE*/
+/*3.CLASSES*/
+/*4.BODY*/
+/*4.1.HEADER*/
+/*4.2.MAIN*/
+/*4.3.FOOTER*/
+/*5.TABLET*/
+/*6.MOBIL*/
+
+/*1.INTEGRERER PARTIAL DOCUMENT*/
 @use 'partial';
 
-/*2:DEFAULT: RETSTIL BROWSER PARAMETRE*/
+/*2.DEFAULT: RETSTIL BROWSER PARAMETRE*/
 *{
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
 }
 
-/*CLASSES*/
+/*3.CLASSES*/
 .hide-btn{
     visibility: hidden;
 }
 
-/*BODY*/
+/*4.BODY*/
 body{
     background-color: partial.$secondary-color;
     display: grid;
@@ -26,7 +38,7 @@ body{
     overflow-x: hidden;
 }
 
-/*HEADER*/
+/*4.1.HEADER*/
 header{
     grid-area: header;
     background-color: partial.$primary-color;
@@ -48,7 +60,7 @@ header{
     }
 }
 
-/*MAIN*/
+/*4.2.MAIN*/
 main{
     grid-area: main;
     background-color: partial.$tertiery-color;
@@ -74,18 +86,22 @@ main{
             text-align: justify;
             padding: 3vw;
         }
-        div{
-        width: auto;
-        height: auto;
-        margin-bottom: 1vw;
-        @include partial.flex();
-        flex-direction: row;
+        #btns-wrapper{
+            width: 92%;
+            @include partial.flex($align: flex-end);
+            flex-direction: column;
+            div{
+            width: auto;
+            height: auto;
+            margin-bottom: 1vw;
+            @include partial.flex();
+            flex-direction: row;
             button{
                 @include partial.btn();
                 font-size: 1.5vw;
                 font-weight: 600;
-            }
-            i{
+                }
+                i{
                 visibility: hidden;
                 background-color: partial.$quaternary-color;
                 color: partial.$primary-color;
@@ -94,22 +110,24 @@ main{
                 border-top: 0.1vw solid black;
                 border-bottom: 0.1vw solid black;
                 }
-            &:hover{
+                &:hover{
                 button{
                     color: partial.$primary-color;
-                }
-                i{
+                    }
+                    i{
                 visibility: visible;
+                    }
                 }
             }
         }
+        
     }    
     img{
         height: 100%; 
     }
 }
 
-/*FOOTER*/
+/*4.3.FOOTER*/
 footer{
     grid-area: footer;
     background-color: partial.$secondary-color;
@@ -119,11 +137,11 @@ footer{
         padding: 1vw;
     }
 }
-/*TABLET*/
+/*5.TABLET*/
 @media only screen and (max-width: 800px){
    
 }
-/*MOBIL*/
+/*6.MOBIL*/
 @media only screen and (max-width: 600px){
     header{
         *{

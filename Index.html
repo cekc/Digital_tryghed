@@ -9,10 +9,10 @@
     <!--META ROBOTS-->
     <meta name=”robots” content="#">
     <!--META DESCRIPTION-->
-    <meta name="description" content="#">
-    <!--IMPORT FONTE OG ICONS FONTAWESOME-->
+    <meta name="description" content="Oplev en interaktiv rejse gennem digitale risici og belønninger med vores datasikkerhedsscenarie. Lær om vigtigheden af sikker online adfærd og beskyt dine digitale aktiver.">
+    <!--IMPORT PIL ICON FONTAWESOME-->
     <script src="https://kit.fontawesome.com/26e58688d6.js" crossorigin="anonymous"></script>
-    <!--LINK TIL JAVASCRIPT SOM FX BURGER MENU TOGGLE - defer fortæller browseren at javascript skal indlæses til efter html siden-->
+    <!--LINK TIL JAVASCRIPT SOM FX BURGER MENU TOGGLE - defer fortæller browseren at javascript skal indlæses efter html siden-->
     <script src="Js/Javascript.js" defer></script>
     <!--IMPORT FONTE PRECONNECT GOOGLE FONTS-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,9 +25,9 @@
     <!--IMPORT/LINK TIL STYLESHEET(S)-->
     <link rel="stylesheet" href="Css/Style.css">  
     <!--LINK TIL FAVICON (DET LILLE BILLEDE VED SIDEN AF TITLE)-->
-    <link rel="icon" type="image/x-icon" href=""> 
+    <link rel="icon" type="image/x-icon" href="Grafik/favicon.ico"> 
     <!--(META) TITLE-->
-    <title>DIGITAL TRYGHED | </title>
+    <title>DIGITAL TRYGHED | Interaktivt Datasikkerhedsscenario og Lær om Sikker Online Adfærd</title>
 </head>
 <body>
     <header>
@@ -38,11 +38,13 @@
         <div>
             <h1 id="main-headline"></h1>
             <p id="main-paragraph"></p>
-            <div id="btn-1-wrapper">
-                <button type="button" id="main-btn-1"></button><i class="fa-solid fa-arrow-right"></i>
-            </div>
-            <div id="btn-2-wrapper">
-                <button type="button" id="main-btn-2"></button><i class="fa-solid fa-arrow-right"></i>
+            <div id="btns-wrapper">
+                <div id="btn-1-wrapper">
+                    <button type="button" id="main-btn-1" data-slide-id="0"></button><i class="fa-solid fa-arrow-right"></i>
+                </div>
+                <div id="btn-2-wrapper">
+                    <button type="button" id="main-btn-2" data-slide-id="0" class="hide-btn"></button><i class="fa-solid fa-arrow-right"></i>
+                </div>
             </div>
         </div>
         <img id="main-img" src="" alt="">

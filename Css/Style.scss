@@ -166,20 +166,30 @@ footer{
         div{
             width: 100%;
             h1{
-                font-size: 6vw;
+                font-size: 7vw;
             }
             p{
-                font-size: 3vw;
-                line-height: 4vw;
+                font-size: 4vw;
+                line-height: 5vw;
+                padding: 6vw;
             }
-            div{
-                button{
-                font-size: 3vw;
-                }
-                i{
-                    font-size: 4vw;
-                }
-            }        
+            #btns-wrapper{
+                div{
+                    button{
+                    font-size: 3.5vw;
+                    }
+                    i{
+                        font-size: 4.8vw;
+                    }
+                }  
+            }
+                  
+        }
+    }
+    footer{
+        p{
+            font-size: 2vw;
+            padding: 3vw;
         }
     }
 }
